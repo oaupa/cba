@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Bauen Web Dev-->
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive HTML Church Website Template | CSS Flexbox Layout</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="join.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h2><a href="#"><img alt="" src="logo/logo.png"></a></h2>
+		<ul class="nav">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="about.html">About</a>
+			</li>
+            <li>
+                <a href="join.html">Join Now</a>
+            </li>
+			<li>
+				<a href="">Services</a>
+			</li>
+			<li>
+				<a href="#contact">Contact</a>
+			</li>
+		</ul>
+	</header>
+    <section class="banner-area">
+		<div class="banner-img"></div>
+		<h3></h3>
+		<h1> <span></span></h1><a class="banner-btn" href="https://wa.me/+2347083981787" target="_blank">
+			<i class="fa fa-whatsapp" id="whatsapp"></i>Join Now</a>
+	</section>
+	<div class="wrapper">
+		<div class="registration_form">
+			<div class="title">
+				Free Membership Form
+			</div>
+	
+			<form onsubmit="sendEmail()">
+				<div class="form_wrap">
+					<div class="input_grp">
+						<div class="input_wrap">
+							<label for="fname">First Name</label>
+							<input type="text" id="fname">
+						</div>
+						<div class="input_wrap">
+							<label for="lname">Last Name</label>
+							<input type="text" id="lname">
+						</div>
+					</div>
+					<div class="input_wrap">
+						<label>Phone Number</label>
+						<input type="text" id="phone">
+
+					</div>
+					<div class="input_wrap">
+						<label for="email">Email Address</label>
+						<input type="text" id="email">
+					</div>
+					<div class="input_wrap">
+						<label>Gender</label>
+						<ul>
+							<li>
+								<label class="radio_wrap">
+									<input type="radio" name="gender" value="male" class="input_radio" checked>
+									<span>Male</span>
+								</label>
+							</li>
+							<li>
+								<label class="radio_wrap">
+									<input type="radio" name="gender" value="female" class="input_radio">
+									<span>Female</span>
+								</label>
+							</li>
+						</ul>
+					</div>
+					<div class="input_wrap">
+						<label for="profession">Profession</label>
+						<input type="text" id="profession">
+					</div>
+					<div class="input_wrap">
+						<label for="address">Address</label>
+						<input type="text" id="address">
+					</div>
+					<div class="input_wrap">
+						<input type="submit" value="Register Now" class="submit_btn">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<section class="contact-area" id="contact">
+		<h3 class="section-title">Our <span>Contact</span></h3>
+		<ul class="contact-content">
+			<li>
+				<i class="fa fa-map-marker"></i>
+				<p>CBA, USEH<br>
+				BENIN CITY, EDO STATE.</p>
+			</li>
+			<li>
+				<i class="fa fa-phone"></i>
+				<p>+234 7083981787<br>
+				</p>
+			</li>
+			<li>
+				<i class="fa fa-envelope"></i>
+				<p>info@bauen.com<br>
+				bauen@line.com</p>
+			</li>
+		</ul>
+	</section>
+	<footer>
+		<p>All Right Reserved --Bauen.com</p>
+	</footer>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+	 function sendEmail(){
+			Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+	SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    To : 'infolamiel@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+	}	
+	</script>
+</body>
+</html>
+	
